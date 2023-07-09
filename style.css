@@ -18,6 +18,7 @@ body {
   font-family: "Raleway", sans-serif;
   padding: 0px 10%;
   background: linear-gradient(to right, #f6faff, white, #f6faff);
+  transition: 0.5s ease-in-out;
 }
 
 nav {
@@ -42,6 +43,12 @@ header {
   justify-content: center;
 }
 
+nav .sign-up {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 header div {
   text-align: center;
 }
@@ -64,6 +71,7 @@ header ul a {
   transition: 0.5s ease-in-out;
   border-radius: 20px;
 }
+
 header ul a:hover {
   background-color: blue;
   color: white;
@@ -84,14 +92,17 @@ header ul a:hover {
   border-radius: 10px;
   transition: 0.5s ease-in-out;
 }
+
 .jobs-grid .box:hover {
   background-color: blue;
   color: white;
 }
+
 .jobs-grid .box .top {
   display: flex;
   align-items: center;
 }
+
 .jobs-grid .box .top span {
   margin-left: 10px;
 }
@@ -105,8 +116,62 @@ header ul a:hover {
   align-items: center;
   justify-content: space-between;
 }
+
 .jobs-grid .bottom small:first-child {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    padding: 0px 2%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    position: relative;
+    height: 70px;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    display: block;
+  }
+
+  nav ul li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  nav ul li {
+    margin: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  nav ul li a {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  header {
+    margin-top: 170px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+  .jobs-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
 }
