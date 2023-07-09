@@ -17,6 +17,7 @@ li {
 body {
   font-family: "Raleway", sans-serif;
   padding: 0px 10%;
+  background: linear-gradient(to right, #f6faff, white, #f6faff);
 }
 
 nav {
@@ -32,4 +33,80 @@ nav ul {
 
 nav ul li {
   margin: 10px;
+}
+
+header {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header div {
+  text-align: center;
+}
+
+header p {
+  margin: 30px 0px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  margin: 5px;
+}
+
+header ul a {
+  padding: 8px;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+}
+header ul a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.featured-jobs h2 {
+  margin-bottom: 10px;
+}
+
+.jobs-grid .box {
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.jobs-grid .box:hover {
+  background-color: blue;
+  color: white;
+}
+.jobs-grid .box .top {
+  display: flex;
+  align-items: center;
+}
+.jobs-grid .box .top span {
+  margin-left: 10px;
+}
+
+.jobs-grid .box p {
+  margin: 20px 0px;
+}
+
+.jobs-grid .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.jobs-grid .bottom small:first-child {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
 }
